@@ -1,0 +1,54 @@
+{
+  "name": "dynamodb-repository",
+  "version": "1.0.0",
+  "main": "build/src/main.js",
+  "types": "build/src/main.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andrade0/dynamodb-repository.git"
+  },
+  "files": [
+    "build/**/*"
+  ],
+  "description": "DynamoDb repository super class for handling data model in dynamoDb",
+  "engines": {
+    "node": ">= 12.13 <13"
+  },
+  "devDependencies": {
+    "@types/jest": "~25.1.2",
+    "@types/node": "~12.12.27",
+    "@typescript-eslint/eslint-plugin": "~2.19.2",
+    "@typescript-eslint/parser": "~2.19.2",
+    "eslint": "~6.8.0",
+    "eslint-config-prettier": "~6.10.0",
+    "eslint-plugin-jest": "~23.7.0",
+    "jest": "~25.1.0",
+    "prettier": "~1.19.1",
+    "rimraf": "~3.0.2",
+    "ts-jest": "~25.2.0",
+    "tsutils": "~3.17.0",
+    "typescript": "~3.8.2"
+  },
+  "scripts": {
+    "clean": "rimraf coverage build tmp",
+    "build": "tsc -p tsconfig.release.json",
+    "start": "tsc -p tsconfig.release.json && node build/src/main.js",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "author": "Jakub Synowiec <github@jakubsynowiec.info>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@types/async": "^3.2.0",
+    "@types/aws-sdk": "^2.7.0",
+    "@types/inversify": "^2.0.33",
+    "aws-sdk": "^2.659.0",
+    "class-transformer": "^0.2.3",
+    "dotenv": "^8.2.0",
+    "inversify": "^5.0.1",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "~1.10.0"
+  }
+}
