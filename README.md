@@ -5,7 +5,7 @@ npm install dynamodb-repository
 
 ###Usage exemple: 
 ```
-import {DiggingDynamodbClient, DiggingDynamodbClientInterface} from "digging-dynamodb-client";
+import {DiggingDynamodbClient, DiggingDynamodbClientInterface} from "dynamodb-repository";
 
 // define primary key of your table. It can be one or to fields depends on your dynamoDb table setup
 class TableKey{

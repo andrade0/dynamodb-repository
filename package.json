@@ -1,6 +1,6 @@
 {
   "name": "dynamodb-repository",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "build/src/main.js",
   "types": "build/src/main.d.ts",
   "repository": {
