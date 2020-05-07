@@ -1,6 +1,5 @@
 #### Start dynamoDb localy ( localy )
 ```
-cd ~/dev/dynamodb
 java -Djava.library.path=./DynamoDBLocal_lib -jar /Users/andrade/dev/dynamodb/DynamoDBLocal.jar -sharedDb
 ```
 
@@ -105,3 +104,12 @@ const api = new UserRepository();
 ```
 
 #### More doc : https://docs.aws.amazon.com/fr_fr/amazondynamodb/latest/developerguide/Tools.CLI.html
+
+
+aws dynamodb create-table \
+    --table-name cache \
+    --attribute-definitions \
+        AttributeName=cacheKey,AttributeType=S \
+    --key-schema AttributeName=cacheKey,KeyType=HASH \
+    --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 \
+    --endpoint-url http://localhost:8000

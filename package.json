@@ -1,6 +1,6 @@
 {
   "name": "dynamodb-repository",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "build/src/main.js",
   "types": "build/src/main.d.ts",
   "repository": {
@@ -50,5 +50,11 @@
     "inversify": "^5.0.1",
     "reflect-metadata": "^0.1.13",
     "tslib": "~1.10.0"
-  }
+  },
+  "keywords": [
+    "typescript",
+    "dynamodb",
+    "repository",
+    "aws"
+  ]
 }
